@@ -86,16 +86,16 @@ open class SwiftAddressBook {
 		return convertRecordsToPersons(ABAddressBookCopyArrayOfAllPeople(internalAddressBook).takeRetainedValue())
     }
 
-//	open func registerExternalChangeCallback(_ callback: @escaping () -> Void) {
-//		addressBookObserver.startObserveChanges { (addressBook) -> Void in
-//			callback()
-//		}
-//	}
-//
-//	open func unregisterExternalChangeCallback(_ callback: () -> Void) {
-//		addressBookObserver.stopObserveChanges()
-//		callback()
-//	}
+	open func registerExternalChangeCallback(_ callback: @escaping () -> Void) {
+		addressBookObserver.startObserveChanges { (addressBook) -> Void in
+			callback()
+		}
+	}
+
+	open func unregisterExternalChangeCallback(_ callback: () -> Void) {
+		addressBookObserver.stopObserveChanges()
+		callback()
+	}
 
 
 
