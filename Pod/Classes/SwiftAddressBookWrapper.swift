@@ -29,7 +29,7 @@ open class SwiftAddressBook {
 
 	open var internalAddressBook : ABAddressBook!
 	
-	//fileprivate lazy var addressBookObserver = SwiftAddressBookObserver()
+	fileprivate lazy var addressBookObserver = SwiftAddressBookObserver()
 
 	public init?() {
 		var err : Unmanaged<CFError>? = nil
